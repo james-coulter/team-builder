@@ -10,7 +10,7 @@ function TeamForm({values, onInputChange, onSubmit}) {
             <input type="text" value={values.email} onChange={onInputChange} name='email'/></label>
             <label>Role:&nbsp;
             <input type="text" value={values.role} onChange={onInputChange} name='role'/></label>
-            <button onClick={onSubmit}>SUBMIT</button>
+            <button className='submit' onClick={onSubmit}>SUBMIT</button>
         </form>
     )
 }

@@ -50,20 +50,24 @@ export default function App() {
 
   return (
 <div className='container'>
-      <header><h1>Team App</h1></header>
-      {
-        members.map(member => {
-          return (
-            <Member key={member.id} details={member} />
-          )
-        })
-      }
+      <header>
+        <h1>Team Builder</h1>
+        <h4>BUILDING & ORGANIZING TEAMS ONE COMPONENT AT A TIME</h4>
+      </header>
 
       <TeamForm
+        className="team-form"
         values={formValues}
         onInputChange={onInputChange}
         onSubmit={onSubmit}
       />
+      {
+        members.map(member => {
+          return (
+            <Member className='members' key={member.id} details={member} />
+          )
+        })
+      }
     </div>
   );
 }

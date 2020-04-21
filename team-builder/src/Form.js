@@ -4,6 +4,7 @@ function TeamForm({values, onInputChange, onSubmit}) {
     return (
         <form className='team-form'>
             <h2>Add Team Members</h2>
+            <h3>Input your team's information here</h3>
             <label>Name:&nbsp;
             <input type="text" value={values.name} onChange={onInputChange} name='name'/></label>
             <label>Email:&nbsp;

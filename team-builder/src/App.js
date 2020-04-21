@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
+import Particles from 'react-particles-js'; 
 import { v4 as uuid } from 'uuid' // GROSS
 import './App.css';
 import TeamForm from './Form'
 import Member from './Member'
+import ParticleComponent from './ParticleComponent'
 
 const initialTeamList = [
 
@@ -50,11 +52,11 @@ export default function App() {
 
   return (
 <div className='container'>
+
       <header>
         <h1>Team Builder</h1>
         <h4>BUILDING & ORGANIZING TEAMS ONE COMPONENT AT A TIME</h4>
       </header>
-
       <TeamForm
         className="team-form"
         values={formValues}

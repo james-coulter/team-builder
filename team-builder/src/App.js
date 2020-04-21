@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 import { v4 as uuid } from 'uuid' // GROSS
 import './App.css';
-import TeamFriend from './Form'
+import TeamForm from './Form'
+import Member from './Member'
 
 const initialTeamList = [
-  // 👉 the shape of the actual friend object from API
+
   {
     id: uuid(),
-    name: 'Michael',
-    email: 'michael@michael.com',
-    role: 'frontend engineer',
+    name: 'James',
+    email: 'j@j.com',
+    role: 'full stack web dev',
   },
 ]
 
@@ -53,18 +54,14 @@ export default function App() {
       {
         members.map(member => {
           return (
-            <Friend key={friend.id} details={friend} />
+            <Member key={member.id} details={member} />
           )
         })
       }
 
-      <FriendForm
-        // 🔥 STEP 2 - THE FORM WANTS ITS FOOD!!!!
-        // check implementation of FriendForm
-        // to see what props it expects
+      <TeamForm
         values={formValues}
         onInputChange={onInputChange}
-        onCheckboxChange={onCheckboxChange}
         onSubmit={onSubmit}
       />
     </div>
